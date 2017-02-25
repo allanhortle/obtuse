@@ -1,0 +1,15 @@
+{
+  "generator-bigdatr-startr": {
+    "promptValues": {
+      "name": "obtuse",
+      "description": "Bruce's Obtuse Spruce Goose",
+      "version": "0.0.0",
+      "license": "UNLICENSED",
+      "private": false,
+      "author": "Allan Hortle",
+      "username": "allanhortle",
+      "nameConstant": "OBTUSE",
+      "sprucePrefix": "Obtuse"
+    }
+  }
+}

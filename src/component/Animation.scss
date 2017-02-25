@@ -1,0 +1,5 @@
+@mixin ObtuseAnimation($name: 'Animation') {
+    .#{$name} {
+        @content;
+    }
+}

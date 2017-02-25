@@ -1,0 +1,5 @@
+@mixin ObtuseProgressBar($name: 'ProgressBar') {
+    .#{$name} {
+        @content;
+    }
+}

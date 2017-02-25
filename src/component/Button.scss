@@ -1,0 +1,5 @@
+@mixin ObtuseButton($name: 'Button') {
+    .#{$name} {
+        @content;
+    }
+}

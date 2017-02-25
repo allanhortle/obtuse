@@ -1,0 +1,5 @@
+@mixin ObtuseText($name: 'Text') {
+    .#{$name} {
+        @content;
+    }
+}

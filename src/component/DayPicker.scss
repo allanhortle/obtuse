@@ -1,0 +1,5 @@
+@mixin ObtuseDayPicker($name: 'DayPicker') {
+    .#{$name} {
+        @content;
+    }
+}

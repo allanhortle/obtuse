@@ -1,0 +1,5 @@
+@mixin ObtuseLoader($name: 'Loader') {
+    .#{$name} {
+        @content;
+    }
+}

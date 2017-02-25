@@ -1,0 +1,5 @@
+@mixin ObtuseCheckbox($name: 'Checkbox') {
+    .#{$name} {
+        @content;
+    }
+}

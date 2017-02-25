@@ -1,0 +1,5 @@
+@mixin ObtuseLabel($name: 'Label') {
+    .#{$name} {
+        @content;
+    }
+}

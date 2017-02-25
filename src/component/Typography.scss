@@ -1,0 +1,5 @@
+@mixin ObtuseTypography($name: 'Typography') {
+    .#{$name} {
+        @content;
+    }
+}

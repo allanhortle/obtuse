@@ -1,0 +1,5 @@
+@mixin ObtuseTable($name: 'Table') {
+    .#{$name} {
+        @content;
+    }
+}

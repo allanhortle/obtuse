@@ -1,0 +1,5 @@
+@mixin ObtusePagination($name: 'Pagination') {
+    .#{$name} {
+        @content;
+    }
+}

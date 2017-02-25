@@ -1,0 +1,5 @@
+@mixin ObtuseTerminal($name: 'Terminal') {
+    .#{$name} {
+        @content;
+    }
+}

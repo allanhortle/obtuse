@@ -1,0 +1,5 @@
+@mixin ObtuseTabSet($name: 'TabSet') {
+    .#{$name} {
+        @content;
+    }
+}
