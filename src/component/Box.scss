@@ -1,5 +1,8 @@
 @mixin ObtuseBox($name: 'Box') {
     .#{$name} {
+        border: 1px solid color('hairline');
+        padding: 1rem;
+        margin: 1rem 0;
         @content;
     }
 }

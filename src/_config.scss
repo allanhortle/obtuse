@@ -1,25 +1,64 @@
-
-//
-// Colors
-
-$bruce-colors: (
-    'white': #fff,
-    'black': #000,
-    'copy': grey(20),
-    'hero': #93619f
-);
-
-
-//
-// Fonts
-
-$bruce-fonts: (
-    'heading': (Helvetica, sans-serif),
-    'copy': (Helvetica, sans-serif)
-);
-
-
-//
-// Breakpoints
-
+$bruce-fonts: ();
+$bruce-colors: ();
 $bruce-breakpoints: ();
+
+@mixin ObtuseConfig($theme: 'light', $fontStyle: 'monospace') {
+
+
+    //
+    // Colors
+
+    @if $theme == 'light' {
+        $bruce-colors: (
+            'white': #fff,
+            'black': #000,
+
+            'background': grey(100),
+            'copy': grey(36),
+            'hero': #93619f,
+            'hairline': grey(80)
+        ) !global;
+    }
+    @if $theme == 'dark' {
+        $bruce-colors: (
+            'white': #000,
+            'black': #fff,
+
+            'background': grey(20),
+            'copy': grey(90),
+            'hero': #93619f,
+            'hairline': grey(30)
+        ) !global;
+    }
+
+
+
+    //
+    // Fonts
+    //
+
+    @if $fontStyle == 'monospace' {
+        $bruce-fonts: (
+            'heading': (Menlo, Consolas, monospace),
+            'copy': (Menlo, Consolas, monospace)
+        ) !global;
+    }
+     @else if $fontStyle == 'serif' {
+        $bruce-fonts: (
+            'heading': (Georgia, serif),
+            'copy': (Georgia, serif)
+        ) !global;
+    } @else {
+        $bruce-fonts: (
+            'heading': ("Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif),
+            'copy': ("Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif)
+        ) !global;
+    }
+
+
+    //
+    // Breakpoints
+
+    $bruce-breakpoints: ();
+
+}

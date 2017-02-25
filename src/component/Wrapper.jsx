@@ -1,2 +1,3 @@
 import SpruceComponent from 'stampy/lib/util/SpruceComponent';
-export default SpruceComponent('Box', 'div');
+export default SpruceComponent('Wrapper', 'div');
+

@@ -1,53 +1,125 @@
-html {
-    height: 100%;
-    position: relative;
-}
+@mixin ObtuseBase() {
 
-body {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    color: grey(40);
-    font-family: font('copy');
-    font-weight: 300;
-    height: 100%;
-    line-height: 1.5;
-    overflow-x: hidden;
-    text-rendering: optimizelegibility;
+    $baseLineHeight: 1.875rem;
+    $baseFontSize: 13px;
 
-    &[aria-hidden='true'] {
-        overflow: hidden;
+    html {
+        height: 100%;
+        position: relative;
+        font-size: $baseFontSize;
     }
-}
 
-a {
-    color: inherit;
-    cursor: pointer;
-    text-decoration: none;
+    body {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        background-color: color('background');
+        color: color('copy');
+        font-family: font('copy');
+        font-size: 1rem;
+        font-weight: 300;
+        font-weight: normal;
+        height: 100%;
+        line-height: $baseLineHeight;
+        line-height: 1.5;
+        overflow-x: hidden;
+        text-rendering: optimizelegibility;
 
-    &:focus {
-        outline: none;
+        &[aria-hidden='true'] {
+            overflow: hidden;
+        }
     }
-}
 
-p {
-    display: block;
-    margin-bottom: 1rem;
-}
+    a {
+        color: inherit;
+        cursor: pointer;
+        text-decoration: none;
 
-em {
-    font-style: italic;
-    font-weight: inherit;
-    margin-top: 0;
-}
+        &:focus {
+            outline: none;
+        }
 
-strong {
-    font-weight: 600;
-}
+        &:visited {
+            color: currentColor;
+        }
+    }
 
-small {
-    font-size: .8em;
-}
+    p {
+        display: block;
+        margin-bottom: 1rem;
+    }
 
-button {
-    font-family: inherit;
+    em {
+        font-style: italic;
+        font-weight: inherit;
+        margin-top: 0;
+    }
+
+    strong {
+        font-weight: 600;
+    }
+
+    small {
+        font-size: .8em;
+    }
+
+    button {
+        font-family: inherit;
+    }
+
+
+    //
+    // Headings
+    // These sizes use a vertical rhythm based on the line height,
+    // try to maintain that rhythm when changing things.
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        display: block;
+        font-weight: bold;
+    }
+
+    h1 {
+        font-size: 3.4rem;
+        line-height: $baseLineHeight * 2;
+        margin-bottom: $baseLineHeight;
+    }
+
+
+    h2 {
+        font-size: 2.8rem;
+        line-height: $baseLineHeight * 2;
+        margin-bottom: $baseLineHeight;
+    }
+
+    h3 {
+        font-size: 2.4rem;
+        line-height: $baseLineHeight * 1.5;
+        margin-bottom: $baseLineHeight / 2;
+    }
+
+
+    h4 {
+        font-size: 2.1rem;
+        line-height: $baseLineHeight * 1.5;
+        margin-bottom: $baseLineHeight / 2;
+    }
+
+
+    h5 {
+        font-size: 1.9rem;
+        line-height: $baseLineHeight * 1.5;
+        margin-bottom: $baseLineHeight / 2;
+    }
+
+
+    h6 {
+        font-size: 1.7rem;
+        line-height: $baseLineHeight * 1.5;
+        margin-bottom: $baseLineHeight / 2;
+    }
+
 }
