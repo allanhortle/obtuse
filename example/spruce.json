@@ -1,0 +1,22 @@
+{
+    "Wrapper": {
+        "name": "Wrapper",
+        "modifiers": [],
+        "children": []
+    },
+    "Box": {
+        "name": "Box",
+        "modifiers": [],
+        "children": []
+    },
+    "Terminal": {
+        "name": "Terminal",
+        "modifiers": [
+            "modifier1",
+            "modifier2"
+        ],
+        "children": [
+            "child"
+        ]
+    }
+}

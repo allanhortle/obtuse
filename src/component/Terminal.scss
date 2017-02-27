@@ -1,5 +1,21 @@
 @mixin ObtuseTerminal($name: 'Terminal') {
     .#{$name} {
+        background-color: color('backgroundDarker');
+        padding: 1rem;
+        font-family: font('monospace');
+        white-space: nowrap;
+        overflow-x: auto;
         @content;
+
+        &_child {
+            background-color: red;
+        }
+
+        &-modifier1 {
+            background-color: red;
+        }
+        &-modifier2 {
+            background-color: green;
+        }
     }
 }

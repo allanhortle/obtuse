@@ -24,6 +24,7 @@ $bruce-breakpoints: ();
             'white': #000,
             'black': #fff,
 
+            'backgroundDarker': grey(10),
             'background': grey(20),
             'copy': grey(90),
             'hero': #93619f,
@@ -40,18 +41,21 @@ $bruce-breakpoints: ();
     @if $fontStyle == 'monospace' {
         $bruce-fonts: (
             'heading': (Menlo, Consolas, monospace),
-            'copy': (Menlo, Consolas, monospace)
+            'copy': (Menlo, Consolas, monospace),
+            'monospace': (Menlo, Consolas, monospace),
         ) !global;
     }
      @else if $fontStyle == 'serif' {
         $bruce-fonts: (
             'heading': (Georgia, serif),
-            'copy': (Georgia, serif)
+            'copy': (Georgia, serif),
+            'monospace': (Menlo, Consolas, monospace)
         ) !global;
     } @else {
         $bruce-fonts: (
             'heading': ("Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif),
-            'copy': ("Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif)
+            'copy': ("Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif),
+            'monospace': (Menlo, Consolas, monospace)
         ) !global;
     }
 

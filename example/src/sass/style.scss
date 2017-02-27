@@ -2,14 +2,17 @@
 @include bruce-reset;
 
 @import '../../../lib/all';
-@include ObtuseConfig('dark', 'monospace');
+@include ObtuseConfig('dark', 'serif');
 @include ObtuseBase;
 
 
 @include ObtuseWrapper;
 @include ObtuseBox;
+@include ObtuseTerminal;
 
 body, html {
     margin: 0;
     padding: 0;
 }
+
+@include bruce-classes;
