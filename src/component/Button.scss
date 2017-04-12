@@ -1,5 +1,25 @@
 @mixin ObtuseButton($name: 'Button') {
     .#{$name} {
+        background-color: color('hero');
+        border: 1px solid color('hero');
+        color: color('white');
+        cursor: pointer;
+        line-height: 1.2;
+        padding: .5rem;
+
+        &:focus {
+            outline: none;
+        }
+
+        &-clear {
+            background-color: transparent;
+            color: currentColor;
+
+            &:hover {
+                opacity: .5;
+            }
+        }
+
         @content;
     }
 }

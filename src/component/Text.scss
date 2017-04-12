@@ -1,5 +1,92 @@
 @mixin ObtuseText($name: 'Text') {
+
+    $baseLineHeight: 1.875rem;
+    $baseFontSize: 16px;
+
+    html {
+        font-family: font('copy');
+        font-size: 1rem;
+        line-height: $baseLineHeight;
+    }
+
     .#{$name} {
+
+        //
+        // Modifiers
+
+
+        &-alpha {
+            color: color('heading');
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: $baseLineHeight * 2;
+        }
+
+        &-hero {
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        &-beta {
+            color: color('heading');
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: $baseLineHeight * 2;
+        }
+
+        &-gamma {
+            color: color('heading');
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        &-capitalize {
+            text-transform: capitalize;
+        }
+
+        &-monospace {
+            font-family: font('monospace');
+        }
+
+        &-block {
+            @include bruce-clearfix;
+            display: block;
+        }
+
+        &-relative {
+            position: relative;
+        }
+
+        &-muted {
+            color: color('muted');
+        }
+
+        &-small {
+            font-size: .9em;
+        }
+
+        &-emphasis {
+            font-style: italic;
+        }
+
+        &-strong {
+            color: color('heading');
+            font-weight: 700;
+        }
+
+
+        @each $name, $color in $bruce-colors {
+            &-#{$name} {
+                color: $color;
+            }
+        }
+
+        &-disabled {
+            color: grey(60);
+            cursor: default;
+        }
+
         @content;
     }
+
 }
