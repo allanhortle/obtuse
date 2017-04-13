@@ -1,5 +1,11 @@
 @mixin ObtuseTable($name: 'Table') {
     .#{$name} {
+
+        width: 100%;
+        td {
+            border-top: 1px solid;
+            padding: .5rem;
+        }
         @content;
     }
 }
