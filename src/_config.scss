@@ -1,6 +1,6 @@
 $bruce-fonts: ();
 $bruce-colors: ();
-$bruce-breakpoints: ();
+// $bruce-breakpoints: ();
 
 @mixin ObtuseConfig($theme: 'light', $fontStyle: 'monospace') {
 
@@ -63,6 +63,6 @@ $bruce-breakpoints: ();
     //
     // Breakpoints
 
-    $bruce-breakpoints: ();
+    // $bruce-breakpoints: ();
 
 }

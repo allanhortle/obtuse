@@ -9,6 +9,10 @@
         line-height: $baseLineHeight;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     .#{$name} {
 
         //
@@ -29,9 +33,11 @@
 
         &-beta {
             color: color('heading');
-            font-size: 1.75rem;
+            display: block;
             font-weight: 700;
-            line-height: $baseLineHeight * 2;
+            // margin-top: 2rem;
+            margin-bottom: 1rem;
+            text-decoration: underline;
         }
 
         &-gamma {

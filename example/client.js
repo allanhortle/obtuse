@@ -4,7 +4,7 @@ import {createEntityReducer} from 'enty';
 import thunk from 'redux-thunk'
 import {Provider} from 'react-redux';
 import {compose, createStore, applyMiddleware, combineReducers} from 'redux';
-import Playground from './components/Playground';
+import Playground from './component/Playground';
 
 
 //
