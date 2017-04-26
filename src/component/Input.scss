@@ -8,23 +8,36 @@
 
     .#{$name} {
         background-color: transparent;
-        border: 0;
+        border: 1px solid currentColor;
         color: currentColor;
         font: inherit;
-        outline: 1px solid currentColor;
-        padding: 0;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        padding: .5rem;
+        width: 100%;
+
 
         &:focus {
-            // outline: 0;
+            border-color: color('focus');
+            outline: 0;
         }
 
         &-clearText {
             background-color: transparent;
             border: 0;
+            outline: 1px solid currentColor;
             padding: 0;
+            width: auto;
+
+            &:focus {
+                outline: 1px solid color('focus');
+            }
         }
 
         @content;
-        @content;
     }
 }
+
+
+
+
