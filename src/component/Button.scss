@@ -20,6 +20,13 @@
             }
         }
 
+        @each $name, $color in $bruce-colors {
+            &-#{$name} {
+                background-color: $color;
+                border-color: $color;
+            }
+        }
+
         @content;
     }
 }
