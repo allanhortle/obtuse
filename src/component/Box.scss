@@ -2,6 +2,11 @@
     .#{$name} {
         padding: 1rem;
 
+        &-row {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
         &-hairline {
             box-shadow: 0 0 0 .5px color('hairline'), inset 0 0 0 .5px color('hairline');
         }

@@ -18,7 +18,6 @@
         //
         // Modifiers
 
-
         &-alpha {
             color: color('heading');
             font-size: 3rem;
@@ -45,6 +44,21 @@
             font-size: 1rem;
             font-weight: 700;
         }
+
+        &-button {
+            padding-right: .5rem;
+        }
+
+        &-link {
+            color: color('link');
+            cursor: pointer;
+            text-decoration: underline;
+
+            &:hover {
+                opacity: .8;
+            }
+        }
+
 
         &-capitalize {
             text-transform: capitalize;
@@ -78,6 +92,10 @@
         &-strong {
             color: color('heading');
             font-weight: 700;
+        }
+
+        &-active {
+            text-decoration: underline;
         }
 
 

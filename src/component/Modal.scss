@@ -1,5 +1,22 @@
 @mixin ObtuseModal($name: 'Modal') {
     .#{$name} {
+        @include bruce-flood;
+        background-color: color('white');
+        position: fixed;
+        z-index: get-zindex('Modal');
+
+        @include bruce-breakpoint(40rem) {
+            background-color: transparentize(color('white'), .1);
+        }
+
+        &_content {
+            @include bruce-breakpoint(40rem) {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
         @content;
     }
 }

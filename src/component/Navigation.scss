@@ -1,5 +1,7 @@
 @mixin ObtuseNavigation($name: 'Navigation') {
     .#{$name} {
+        padding: 1rem;
+        background-color: color('Navigation');
         @content;
     }
 }

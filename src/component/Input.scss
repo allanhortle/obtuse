@@ -7,22 +7,21 @@
     }
 
     .#{$name} {
-        border: 1px solid color('hairline');
+        background-color: transparent;
+        border: 0;
         color: currentColor;
         font: inherit;
-        line-height: 1.2;
-        margin-bottom: 1rem;
-        padding: .5rem;
-        width: 100%;
+        outline: 1px solid currentColor;
+        padding: 0;
 
         &:focus {
-            outline: 0;
+            // outline: 0;
         }
 
         &-clearText {
+            background-color: transparent;
             border: 0;
             padding: 0;
-            background-color: transparent;
         }
 
         @content;

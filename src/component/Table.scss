@@ -3,7 +3,7 @@
 
         width: 100%;
         td {
-            border-top: 1px solid;
+            border-top: 1px solid color('hairline');
             padding: .5rem;
         }
         @content;
