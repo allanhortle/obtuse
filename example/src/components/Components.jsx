@@ -13,7 +13,6 @@ export default (props) => {
         .keys(Components)
         .map(cc => {
             const Comp = Components[cc];
-            console.log(spruce[cc]);
             return <Box key={cc}>
                 <h2>{cc}</h2>
                 <Comp>{loremIpsum()}</Comp>

@@ -3,7 +3,7 @@ $bruce-colors: ();
 // $bruce-breakpoints: ();
 
 
-@mixin ObtuseConfig($theme: 'dark', $fontStyle: 'monospace') {
+@mixin ObtuseConfig($theme: 'light', $fontStyle: 'monospace') {
 
 
     //
@@ -16,14 +16,18 @@ $bruce-colors: ();
 
             'background': grey(100),
             'copy': grey(36),
+            'muted': grey(70),
             'hero': #6555cf,
             'hairline': grey(80),
             'link': #558fcf,
             'Navigation': grey(90),
+            'Select_value': grey(90),
 
             'primary': #6555cf,
             'secondary': grey(30),
             'focus': #6555cf,
+            'true': #55cf9e,
+            'false': #cf5591
         ) !global;
     }
     @if $theme == 'dark' {
@@ -34,14 +38,18 @@ $bruce-colors: ();
             'backgroundDarker': grey(10),
             'background': grey(18),
             'copy': grey(70),
+            'muted': grey(50),
             'hero': #6555cf,
             'hairline': grey(10),
             'link': #558fcf,
             'Navigation': grey(10),
+            'Select_value': grey(10),
 
             'primary': #6555cf,
             'secondary': grey(30),
-            'focus': #6555cf
+            'focus': #6555cf,
+            'true': #55cf9e,
+            'false': #cf5591
         ) !global;
     }
 

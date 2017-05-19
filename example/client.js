@@ -1,3 +1,7 @@
+
+import logger from 'enty/lib/logger';
+logger.setLogLevel('silly');
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {createEntityReducer} from 'enty';

@@ -3,12 +3,16 @@
         padding: 1rem;
 
         &-row {
-            padding-left: 0;
-            padding-right: 0;
+            margin: 1rem 0;
+            padding: 0;
         }
 
         &-hairline {
             box-shadow: 0 0 0 .5px color('hairline'), inset 0 0 0 .5px color('hairline');
+
+            & + & {
+                margin-top: 1rem;
+            }
         }
 
         &-flood {

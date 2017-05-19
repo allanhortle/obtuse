@@ -1,5 +1,44 @@
 @mixin ObtuseSelect($name: 'Select') {
     .#{$name} {
+        &-control {
+            border: 1px solid currentColor;
+            padding: .25rem 0;
+        }
+
+        &-menu-outer {
+            border: 1px solid color('hairlineDark');
+            max-height: 300px;
+            // min-height: 300px;
+            overflow: auto;
+            padding: .25rem;
+            // padding: 0 1rem;
+            border-top: 0;
+            z-index: get-zindex('Select');
+        }
+
+        &-value {
+            background-color: color('Select_value');
+            display: inline-block;
+            margin: .25rem .5rem;
+            margin-right: 0;
+            padding-right: .25rem;
+            width: auto;
+        }
+
+        &-input {
+            margin: .25rem .5rem;
+        }
+
+        &-value-icon {
+            padding: 0 .25rem;
+        }
+
+        &-placeholder {
+            left: .5rem !important;
+            top: .5rem !important;
+            bottom: .25rem;
+        }
+
         @content;
     }
 }
