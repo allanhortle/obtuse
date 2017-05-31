@@ -1,5 +1,8 @@
 @mixin ObtuseDeadEnd($name: 'DeadEnd') {
     .#{$name} {
+        padding: 4rem;
+        text-align: center;
+
         @content;
     }
 }
