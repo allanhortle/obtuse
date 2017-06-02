@@ -2109,11 +2109,11 @@ good-listener@^1.2.0:
   dependencies:
     delegate "^3.1.1"
 
-goose-css@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/goose-css/-/goose-css-0.1.0.tgz#3b361bf43ec4fd296d14edd9f60b642fe0e82a3e"
+goose-css@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/goose-css/-/goose-css-0.5.0.tgz#310bff4e2fc2dd35dac8c7044a63516df0d0c54d"
   dependencies:
-    stampy "^0.25.0"
+    stampy "^0.29.0"
 
 got@^5.0.0:
   version "5.7.1"
@@ -3397,23 +3397,12 @@ react-immutable-proptypes@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/react-immutable-proptypes/-/react-immutable-proptypes-2.1.0.tgz#023d6f39bb15c97c071e9e60d00d136eac5fa0b4"
 
-react-input-autosize@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-1.1.0.tgz#3fe1ac832387d8abab85f6051ceab1c9e5570853"
-
 react-input-autosize@^1.1.3:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-1.1.4.tgz#cbc45072d4084ddc57806db8e3b34e644b8366ac"
   dependencies:
     create-react-class "^15.5.2"
     prop-types "^15.5.8"
-
-react-select@^1.0.0-rc.3:
-  version "1.0.0-rc.3"
-  resolved "https://registry.yarnpkg.com/react-select/-/react-select-1.0.0-rc.3.tgz#94ade090522153067eff09282d0525249ea1d9e3"
-  dependencies:
-    classnames "^2.2.4"
-    react-input-autosize "^1.1.0"
 
 react-select@^1.0.0-rc.4:
   version "1.0.0-rc.5"
@@ -3821,26 +3810,9 @@ stack-utils@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/stack-utils/-/stack-utils-0.4.0.tgz#940cb82fccfa84e8ff2f3fdf293fe78016beccd1"
 
-stampy@^0.25.0:
-  version "0.25.0"
-  resolved "https://registry.yarnpkg.com/stampy/-/stampy-0.25.0.tgz#56513c3d1c38399a9d88101944652cc103ae351c"
-  dependencies:
-    bruce "^0.9.0"
-    classnames "^2.2.5"
-    element-resize-detector "^1.1.9"
-    immutable "^3.8.1"
-    lru-memoize "^1.0.2"
-    moment "^2.18.1"
-    numeral "^2.0.6"
-    prop-types "^15.5.8"
-    proxyquire "^1.7.11"
-    react-immutable-proptypes "^2.1.0"
-    react-select "^1.0.0-rc.3"
-    url-search-params "^0.7.0"
-
-stampy@^0.28.0:
-  version "0.28.0"
-  resolved "https://registry.yarnpkg.com/stampy/-/stampy-0.28.0.tgz#2c0bb57e9c94225652f8f1bd18dd8d9f22e344bf"
+stampy@^0.29.0:
+  version "0.29.0"
+  resolved "https://registry.yarnpkg.com/stampy/-/stampy-0.29.0.tgz#3edd712503996cd9d74009e8bcbfeff79fa38f9e"
   dependencies:
     bruce "^0.9.0"
     classnames "^2.2.5"

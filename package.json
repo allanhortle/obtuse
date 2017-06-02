@@ -29,11 +29,11 @@
     "test-all": "NODE_ENV=test yarn run lint && yarn run flow && yarn run test"
   },
   "dependencies": {
-    "goose-css": "^0.1.0",
+    "goose-css": "^0.5.0",
     "moment": "^2.18.1",
     "numeral": "^2.0.6",
     "prop-types": "^15.5.8",
-    "stampy": "^0.28.0"
+    "stampy": "^0.29.0"
   },
   "devDependencies": {
     "ava": "^0.17.0",
