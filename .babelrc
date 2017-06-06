@@ -1,6 +1,6 @@
-{
+ {
     "presets": [
-        "blueflag"
+        ["blueflag", {browser: true}]
     ],
     "ignore": ["./lib"],
     "env": {
