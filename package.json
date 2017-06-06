@@ -29,11 +29,10 @@
     "test-all": "NODE_ENV=test yarn run lint && yarn run flow && yarn run test"
   },
   "dependencies": {
-    "goose-css": "^0.5.0",
+    "goose-css": "^0.5.1",
     "moment": "^2.18.1",
     "numeral": "^2.0.6",
-    "prop-types": "^15.5.8",
-    "stampy": "^0.29.0"
+    "prop-types": "^15.5.8"
   },
   "devDependencies": {
     "ava": "^0.17.0",
@@ -89,5 +88,8 @@
     "require": [
       "babel-register"
     ]
+  },
+  "peerDependencies": {
+    "stampy": "^0.30.0"
   }
 }

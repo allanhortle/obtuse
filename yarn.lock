@@ -2109,11 +2109,11 @@ good-listener@^1.2.0:
   dependencies:
     delegate "^3.1.1"
 
-goose-css@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/goose-css/-/goose-css-0.5.0.tgz#310bff4e2fc2dd35dac8c7044a63516df0d0c54d"
+goose-css@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/goose-css/-/goose-css-0.5.1.tgz#ee739f1aef6c87f030629ad1f3eedc0e7777818c"
   dependencies:
-    stampy "^0.29.0"
+    stampy "^0.30.0"
 
 got@^5.0.0:
   version "5.7.1"
@@ -3810,9 +3810,9 @@ stack-utils@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/stack-utils/-/stack-utils-0.4.0.tgz#940cb82fccfa84e8ff2f3fdf293fe78016beccd1"
 
-stampy@^0.29.0:
-  version "0.29.0"
-  resolved "https://registry.yarnpkg.com/stampy/-/stampy-0.29.0.tgz#3edd712503996cd9d74009e8bcbfeff79fa38f9e"
+stampy@^0.30.0:
+  version "0.30.0"
+  resolved "https://registry.yarnpkg.com/stampy/-/stampy-0.30.0.tgz#1c366bd713185284549321913c3d4ebedca951ca"
   dependencies:
     bruce "^0.9.0"
     classnames "^2.2.5"
