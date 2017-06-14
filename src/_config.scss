@@ -26,8 +26,9 @@ $bruce-colors: ();
             'primary': #6555cf,
             'secondary': grey(30),
             'focus': #6555cf,
-            'true': #55cf9e,
-            'false': #cf5591
+            'success': #55cf9e,
+            'failure': #cf5591,
+            'warning': #e07e4d
         ) !global;
     }
     @if $theme == 'dark' {
@@ -48,8 +49,9 @@ $bruce-colors: ();
             'primary': #6555cf,
             'secondary': grey(30),
             'focus': #6555cf,
-            'true': #55cf9e,
-            'false': #cf5591
+            'success': #55cf9e,
+            'failure': #cf5591,
+            'warning': #e07e4d,
         ) !global;
     }
 
