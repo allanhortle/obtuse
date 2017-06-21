@@ -7,6 +7,11 @@
             padding: 0;
         }
 
+        &-column {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
         &-hairline {
             box-shadow: 0 0 0 .5px color('hairline'), inset 0 0 0 .5px color('hairline');
 
