@@ -7,14 +7,15 @@ import SpruceClassName from 'stampy/lib/util/SpruceClassName';
 
 export default function Text(props: Object): React.Element<any> {
     const {
-        spruceName = 'Text',
+        className,
+        dateFormat,
         modifier,
         numberFormat,
-        dateFormat,
-        className,
         onClick,
-        title,
+        peer,
+        spruceName = 'Text',
         style,
+        title,
         element: Element = 'span'
     } = props;
 
@@ -29,7 +30,7 @@ export default function Text(props: Object): React.Element<any> {
     }
 
     return <Element
-        className={SpruceClassName({name: spruceName, modifier, className})}
+        className={SpruceClassName({name: spruceName, modifier, className, peer})}
         style={style}
         onClick={onClick}
         title={title}
@@ -64,6 +65,9 @@ Text.propTypes = {
 
     /** {SpruceName} */
     spruceName: PropTypes.string,
+
+    /** {Peer} */
+    peer: PropTypes.string,
 
     /** {Style} */
     style: PropTypes.object
