@@ -2127,9 +2127,9 @@ good-listener@^1.2.0:
   dependencies:
     delegate "^3.1.1"
 
-goose-css@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/goose-css/-/goose-css-0.5.1.tgz#ee739f1aef6c87f030629ad1f3eedc0e7777818c"
+goose-css@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/goose-css/-/goose-css-0.8.0.tgz#64d73b25b2b5a5312fdf645d31e9f08a9dabe890"
   dependencies:
     stampy "^0.30.0"
 
