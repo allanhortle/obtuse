@@ -1,5 +1,9 @@
 @mixin ObtuseGrid($name: 'Grid') {
+    @include bruce-grid($name, $name+'_column');
     .#{$name} {
+        & > [class*=Grid_column] {
+            margin-bottom: 0;
+        }
         @content;
     }
 }

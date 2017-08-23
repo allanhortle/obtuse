@@ -1,6 +1,6 @@
 @mixin ObtuseTerminal($name: 'Terminal') {
     .#{$name} {
-        background-color: color('backgroundDarker');
+        background-color: color('alternativeBackground');
         padding: 1rem;
         font-family: font('monospace');
         white-space: nowrap;

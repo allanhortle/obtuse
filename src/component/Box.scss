@@ -1,6 +1,12 @@
 @mixin ObtuseBox($name: 'Box') {
     .#{$name} {
-        padding: 1rem;
+        &-padded {
+            padding: 1rem;
+        }
+
+        &-thick {
+            padding: 2rem;
+        }
 
         &-row {
             margin: 1rem 0;
