@@ -1,9 +1,89 @@
-@mixin ObtuseGrid($name: 'Grid') {
-    @include bruce-grid($name, $name+'_column');
-    .#{$name} {
-        & > [class*=Grid_column] {
-            margin-bottom: 0;
+$gutter: 1rem !default;
+$number: 12;
+
+@mixin ObtuseGridWidths {
+    border-left: $gutter solid transparent;
+    border-right: $gutter solid transparent;
+    display: table-cell;
+    margin: 0;
+
+    &:first-child {
+        border-left: 0;
+    }
+
+    &:last-child {
+        border-right: 0;
+    }
+
+    &-flush {
+        border: 0;
+    }
+
+    // nullify quashed borders on pushed and pulled cols
+    &-push,
+    &-pull {
+        border-left: $gutter solid transparent;
+        border-right: $gutter solid transparent;
+    }
+
+    // column widths
+    @for $i from 1 through $number {
+        &-#{$i} {
+            width: (100% / $number) * $i;
+
+            // quash borders on correct sides of swapped 2 column grids
+            &-push#{$number - $i} {
+                border-right: 0;
+            }
+
+            &-pull#{$number - $i} {
+                border-left: 0;
+            }
         }
+
+        // pushing and pulling columns
+        &-push#{$i} {
+            left: (100% / $number) * $i;
+            position: relative;
+        }
+
+        &-pull#{$i} {
+            position: relative;
+            right: (100% / $number) * $i;
+        }
+    }
+}
+
+@mixin ObtuseGrid($name: 'Grid') {
+    .#{$name} {
+        box-sizing: border-box;
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+
+        &-auto {
+            table-layout: auto;
+        }
+
+        &_column {
+            box-sizing: border-box;
+            display: block;
+            vertical-align: top;
+
+            @include bruce-breakpoint('small') {
+                @include ObtuseGridWidths;
+            }
+
+            &-always {
+                @include ObtuseGridWidths;
+            }
+
+            &-shrink {
+                width: 1px;
+                white-space: nowrap;
+            }
+        }
+
         @content;
     }
 }
