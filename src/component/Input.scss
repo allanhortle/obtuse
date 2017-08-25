@@ -8,11 +8,11 @@
 
     .#{$name} {
         background-color: transparent;
-        border: 1px solid currentColor;
+        border: 1px solid color('hairline');
         color: currentColor;
         font: inherit;
         line-height: 1.2;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
         padding: .5rem;
         width: 100%;
 

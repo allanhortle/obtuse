@@ -1,53 +1,75 @@
 @mixin ObtuseText($name: 'Text') {
-
-    $baseLineHeight: 1.875rem;
-    $baseFontSize: 16px;
-
-    html {
-        font-family: font('copy');
-        font-size: 1rem;
-        line-height: $baseLineHeight;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
     .#{$name} {
 
-        //
-        // Modifiers
+        // Size
 
-        &-alpha {
+        &-sizeGiga {
             color: color('heading');
-            font-size: 3rem;
-            font-weight: 700;
-            line-height: $baseLineHeight * 2;
+            font-size: 3.5rem;
+            font-weight: 400;
         }
 
-        &-hero {
-            font-weight: 900;
-            letter-spacing: -1px;
+        &-sizeMega {
+            color: color('heading');
+            font-size: 2.5rem;
+            font-weight: 300;
         }
 
-        &-beta {
+        &-sizeKilo {
             color: color('heading');
-            display: block;
-            font-weight: 700;
-            // margin-top: 2rem;
-            margin-bottom: 1rem;
-            text-decoration: underline;
+            font-size: 2rem;
+            font-weight: 300;
         }
 
-        &-gamma {
-            color: color('heading');
+        &-size {
             font-size: 1rem;
+        }
+
+        &-sizeMilli {
+            font-size: .9rem;
+        }
+
+        // Margin
+
+        &-marginGiga {
+            margin-top: 4.5rem;
+            margin-bottom: 1rem;
+        }
+
+        &-marginMega {
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        &-marginKilo {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        &-margin {
+            margin-bottom: 1rem;
+        }
+
+        &-marginMilli {
+            margin-bottom: .5rem;
+        }
+
+        // Goose
+
+        &-muted {
+            color: color('muted');
+        }
+
+        &-emphasis {
+            font-style: italic;
+        }
+
+        &-strong {
+            color: color('heading');
             font-weight: 700;
         }
 
-        &-button {
-            padding-right: .5rem;
-        }
+        // Other modifiers
 
         &-link {
             color: color('link');
@@ -58,7 +80,6 @@
                 opacity: .8;
             }
         }
-
 
         &-capitalize {
             text-transform: capitalize;
@@ -77,23 +98,6 @@
             position: relative;
         }
 
-        &-muted {
-            color: color('muted');
-        }
-
-        &-small {
-            font-size: .9em;
-        }
-
-        &-emphasis {
-            font-style: italic;
-        }
-
-        &-strong {
-            color: color('heading');
-            font-weight: 700;
-        }
-
         &-active {
             text-decoration: underline;
         }
@@ -101,7 +105,6 @@
         &-center {
             text-align: center;
         }
-
 
         @each $name, $color in $bruce-colors {
             &-#{$name} {
@@ -112,6 +115,19 @@
         &-disabled {
             color: grey(60);
             cursor: default;
+        }
+
+        &-code {
+            background-color: color('alternativeBackground');
+            padding: 0 .25rem;
+            border-radius: 3px;
+        }
+
+        // Peers
+
+        &--Button {
+            line-height: 1.2;
+            padding: .5rem 1rem .5rem .5rem;
         }
 
         @content;

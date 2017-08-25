@@ -1,16 +1,83 @@
 @mixin ObtuseBox($name: 'Box') {
     .#{$name} {
-        padding: 1rem;
 
-        &-row {
+        // Margin Row
+
+        &-marginRowGiga {
+            margin: 6rem 0;
+        }
+
+        &-marginRowMega {
+            margin: 5rem 0;
+        }
+
+        &-marginRowKilo {
+            margin: 2rem 0;
+        }
+
+        &-marginRow {
             margin: 1rem 0;
-            padding: 0;
         }
 
-        &-column {
-            padding-top: 0;
-            padding-bottom: 0;
+        &-marginRowMilli {
+            margin: .5rem 0;
         }
+
+        // Margin Top
+
+        &-marginTopGiga {
+            margin-top: 6rem;
+        }
+
+        &-marginTopMega {
+            margin-top: 5rem;
+        }
+
+        &-marginTopKilo {
+            margin-top: 2rem;
+        }
+
+        &-marginTop {
+            margin-top: 1rem;
+        }
+
+        &-marginTopMilli {
+            margin-top: .5;
+        }
+
+        // Margin Bottom
+
+        &-marginBottomGiga {
+            margin-bottom: 6rem;
+        }
+
+        &-marginBottomMega {
+            margin-bottom: 5rem;
+        }
+
+        &-marginBottomKilo {
+            margin-bottom: 2rem;
+        }
+
+        &-marginBottom {
+            margin-bottom: 1rem;
+        }
+
+        &-marginBottomMilli {
+            margin-bottom: .5;
+        }
+
+        // Padding
+
+        &-paddingKilo {
+            padding: 2rem;
+        }
+
+        &-padding {
+            padding: 1rem;
+        }
+
+        // Other modifiers
 
         &-hairline {
             box-shadow: 0 0 0 .5px color('hairline'), inset 0 0 0 .5px color('hairline');

@@ -1,17 +1,17 @@
 @mixin ObtuseBase() {
 
-    $baseLineHeight: 1.2;
     $baseFontSize: 13px;
+    $baseLineHeight: 1.6;
 
     html {
         height: 100%;
         position: relative;
         font-size: $baseFontSize;
+        line-height: $baseLineHeight;
     }
 
     body {
         -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
         background-color: color('background');
         color: color('copy');
         font-family: font('copy');
@@ -39,6 +39,10 @@
         // &:visited {
         //     color: inherit;
         // }
+    }
+
+    a {
+        text-decoration: none;
     }
 
     button {
