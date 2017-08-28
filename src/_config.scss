@@ -16,7 +16,9 @@ $bruce-colors: ();
 
             'background': grey(100),
             'alternativeBackground': grey(94),
+            'invertBackground': #333333,
             'copy': #383838,
+            'invertCopy': grey(70),
             'heading': #383838,
             'muted': grey(70),
             'hairline': grey(80),
@@ -29,7 +31,14 @@ $bruce-colors: ();
             'focus': #6CA6CE,
             'success': #55cf9e,
             'failure': #cf5591,
-            'warning': #e07e4d
+            'warning': #e07e4d,
+
+            'terminalKeyword': #C55B4E,
+            'terminalTag': #E1AE69,
+            'terminalString': #86C797,
+            'terminalNumber': #6CA6CE,
+            'terminalBoolean': #6CA6CE,
+            'terminalComment': #6D6D6D
         ) !global;
     }
     @if $theme == 'dark' {
