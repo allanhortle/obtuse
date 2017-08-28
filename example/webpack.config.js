@@ -36,8 +36,9 @@ const development = {
         modulesDirectories: ['/fake-directory-dont-create-a-directory-here'],
         root: [path.resolve(__dirname, './src'), path.resolve(__dirname, './node_modules')],
         alias: {
-            'enty-example': path.resolve(__dirname, "../")
-        }
+            'obtuse': path.resolve(__dirname, "../")
+        },
+        fallback: path.resolve(__dirname, '../node_modules')
     },
     plugins: [
         new webpack.DefinePlugin({
