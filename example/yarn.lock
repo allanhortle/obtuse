@@ -1358,6 +1358,10 @@ date-now@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
 
+debounce@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/debounce/-/debounce-1.0.2.tgz#503cc674d8d7f737099664fb75ddbd36b9626dc6"
+
 debug@2.6.8, debug@^2.1.1, debug@^2.2.0, debug@^2.6.6, debug@^2.6.8:
   version "2.6.8"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.8.tgz#e731531ca2ede27d188222427da17821d68ff4fc"
@@ -1454,7 +1458,7 @@ electron-to-chromium@^1.2.7, electron-to-chromium@^1.3.18:
   version "1.3.18"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.18.tgz#3dcc99da3e6b665f6abbc71c28ad51a2cd731a9c"
 
-element-resize-detector@^1.1.9:
+element-resize-detector@^1.1.12:
   version "1.1.12"
   resolved "https://registry.yarnpkg.com/element-resize-detector/-/element-resize-detector-1.1.12.tgz#8b3fd6eedda17f9c00b360a0ea2df9927ae80ba2"
   dependencies:
@@ -2092,12 +2096,6 @@ good-listener@^1.2.2:
   dependencies:
     delegate "^3.1.2"
 
-goose-css@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/goose-css/-/goose-css-0.8.0.tgz#64d73b25b2b5a5312fdf645d31e9f08a9dabe890"
-  dependencies:
-    stampy "^0.30.0"
-
 graceful-fs@^4.1.2:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
@@ -2444,6 +2442,12 @@ is-plain-obj@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-1.1.0.tgz#71a50c8429dfca773c92a390a4a03b39fcd51d3e"
 
+is-plain-object@^2.0.3:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/is-plain-object/-/is-plain-object-2.0.4.tgz#2c163b3fafb1b606d9d17928f05c2a1c38e07677"
+  dependencies:
+    isobject "^3.0.1"
+
 is-posix-bracket@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/is-posix-bracket/-/is-posix-bracket-0.1.1.tgz#3334dc79774368e92f016e6fbc0a88f5cd6e6bc4"
@@ -2497,6 +2501,10 @@ isobject@^2.0.0:
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-2.1.0.tgz#f065561096a3f1da2ef46272f815c840d87e0c89"
   dependencies:
     isarray "1.0.0"
+
+isobject@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
 
 isomorphic-fetch@^2.1.1:
   version "2.2.1"
@@ -3032,15 +3040,6 @@ object.omit@^2.0.0:
   dependencies:
     for-own "^0.1.4"
     is-extendable "^0.1.1"
-
-obtuse@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/obtuse/-/obtuse-0.4.0.tgz#9ba9a50ec28ce633ebaa18a593ef6e9399ed50bd"
-  dependencies:
-    goose-css "^0.8.0"
-    moment "^2.18.1"
-    numeral "^2.0.6"
-    prop-types "^15.5.8"
 
 on-finished@~2.3.0:
   version "2.3.0"
@@ -4133,14 +4132,16 @@ sshpk@^1.7.0:
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
 
-stampy@^0.30.0:
-  version "0.30.0"
-  resolved "https://registry.yarnpkg.com/stampy/-/stampy-0.30.0.tgz#1c366bd713185284549321913c3d4ebedca951ca"
+stampy@^0.32.3:
+  version "0.32.3"
+  resolved "https://registry.yarnpkg.com/stampy/-/stampy-0.32.3.tgz#e6fed27f05b3d305cad0b118d74e9424f8bc6457"
   dependencies:
     bruce "^0.9.0"
     classnames "^2.2.5"
-    element-resize-detector "^1.1.9"
+    debounce "^1.0.2"
+    element-resize-detector "^1.1.12"
     immutable "^3.8.1"
+    is-plain-object "^2.0.3"
     lru-memoize "^1.0.2"
     moment "^2.18.1"
     numeral "^2.0.6"
@@ -4148,7 +4149,7 @@ stampy@^0.30.0:
     proxyquire "^1.7.11"
     react-immutable-proptypes "^2.1.0"
     react-select "^1.0.0-rc.4"
-    url-search-params "^0.7.0"
+    url-search-params "^0.9.0"
 
 "statuses@>= 1.3.1 < 2", statuses@~1.3.1:
   version "1.3.1"
@@ -4446,9 +4447,9 @@ url-parse@^1.1.8:
     querystringify "~1.0.0"
     requires-port "1.0.x"
 
-url-search-params@^0.7.0:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/url-search-params/-/url-search-params-0.7.1.tgz#e4ec5766ca34f1c72a9fb03cfbbe4b4fbc707d20"
+url-search-params@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/url-search-params/-/url-search-params-0.9.0.tgz#e71d7764a6503533cbfe9771b2963cb61ea1c225"
 
 url@^0.11.0:
   version "0.11.0"

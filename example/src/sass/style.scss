@@ -19,13 +19,11 @@ $bruce-zindexList: (
 @include ObtuseCheckbox;
 @include ObtuseChoice;
 @include ObtuseDayPicker;
-@include ObtuseDeadEnd;
 @include ObtuseDropdown;
 @include ObtuseGrid;
 @include ObtuseHeading;
 @include ObtuseIcon;
 @include ObtuseInput;
-@include ObtuseInputRow;
 @include ObtuseLabel;
 @include ObtuseLink;
 @include ObtuseList;
@@ -49,3 +47,9 @@ $bruce-zindexList: (
 @include bruce-float;
 @include bruce-widths;
 
+.Example_container {
+    background-color: rgba(0, 0, 0, 0.04);
+    border: 1px solid #FFF;
+    display: inline-block;
+    overflow: auto;
+}
