@@ -1,18 +1,69 @@
 @import '~bruce/bruce';
-@include bruce-reset;
+@include bruce-reset();
+@include bruce-box-sizing();
 
-@import '../../../lib/all';
-@include ObtuseConfig('dark', 'serif');
-@include ObtuseBase;
+$bruce-zindexList: (
+    'Select',
+    'Modal'
+);
 
-
-@include ObtuseWrapper;
-@include ObtuseBox;
-@include ObtuseTerminal;
-
-body, html {
-    margin: 0;
-    padding: 0;
+@mixin ExampleHighlight {
+    background-color: rgba(0, 0, 0, 0.03);
 }
 
+@import '~obtuse/lib/all';
+@include ObtuseConfig;
+@include ObtuseBase;
+
+@include ObtuseAnimation;
+@include ObtuseBadge;
+@include ObtuseBox;
+@include ObtuseBreadcrumbs;
+@include ObtuseButton;
+@include ObtuseCheckbox;
+@include ObtuseChoice;
+@include ObtuseDayPicker;
+@include ObtuseDropdown;
+@include ObtuseGrid {
+    &_column-exampleHighlight {
+        @include ExampleHighlight;
+    }
+};
+@include ObtuseIcon;
+@include ObtuseInput;
+@include ObtuseLabel;
+@include ObtuseLink;
+@include ObtuseList;
+@include ObtuseLoader;
+@include ObtuseLogin;
+@include ObtuseMedia;
+@include ObtuseMessage;
+@include ObtuseModal;
+@include ObtuseNavigation;
+@include ObtusePagination;
+@include ObtuseProgressBar;
+@include ObtuseSelect;
+@include ObtuseTab;
+@include ObtuseTable;
+@include ObtuseTabSet;
+@include ObtuseTerminal;
+@include ObtuseText;
+@include ObtuseWrapper;
+
+@include bruce-component-media;
 @include bruce-classes;
+@include bruce-float;
+@include bruce-widths;
+
+.Example_container {
+    display: inline-block;
+    overflow: hidden;
+
+    &-exampleHighlight {
+        @include ExampleHighlight;
+    }
+
+    &-block {
+        display: block;
+    }
+}

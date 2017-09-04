@@ -1,11 +1,14 @@
 $gutter: 1rem !default;
 $number: 12;
 
-@mixin ObtuseGridWidths {
-    border-left: $gutter solid transparent;
-    border-right: $gutter solid transparent;
+@mixin ToyotaGridWidths {
     display: table-cell;
     margin: 0;
+
+    &-gutter {
+        border-left: $gutter solid transparent;
+        border-right: $gutter solid transparent;
+    }
 
     &:first-child {
         border-left: 0;
@@ -15,30 +18,10 @@ $number: 12;
         border-right: 0;
     }
 
-    &-flush {
-        border: 0;
-    }
-
-    // nullify quashed borders on pushed and pulled cols
-    &-push,
-    &-pull {
-        border-left: $gutter solid transparent;
-        border-right: $gutter solid transparent;
-    }
-
     // column widths
     @for $i from 1 through $number {
         &-#{$i} {
             width: (100% / $number) * $i;
-
-            // quash borders on correct sides of swapped 2 column grids
-            &-push#{$number - $i} {
-                border-right: 0;
-            }
-
-            &-pull#{$number - $i} {
-                border-left: 0;
-            }
         }
 
         // pushing and pulling columns
@@ -71,11 +54,11 @@ $number: 12;
             vertical-align: top;
 
             @include bruce-breakpoint('small') {
-                @include ObtuseGridWidths;
+                @include ToyotaGridWidths;
             }
 
             &-always {
-                @include ObtuseGridWidths;
+                @include ToyotaGridWidths;
             }
 
             &-shrink {

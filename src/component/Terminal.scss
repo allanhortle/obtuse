@@ -5,6 +5,39 @@
         font-family: font('monospace');
         white-space: nowrap;
         overflow-x: auto;
+
+        &-code {
+            color: color('invertCopy');
+            background-color: color('invertBackground');
+        }
+
+        &-prism {
+            .token.keyword {
+                color: color('terminalKeyword');
+            }
+
+            .token.tag {
+                color: color('terminalTag');
+            }
+
+            .token.string {
+                color: color('terminalString');
+            }
+
+            .token.number {
+                color: color('terminalNumber');
+            }
+
+            .token.boolean {
+                color: color('terminalBoolean');
+            }
+
+            .token.comment {
+                color: color('terminalComment');
+            }
+        }
+
+
         @content;
 
         &_child {
