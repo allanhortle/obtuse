@@ -7,6 +7,10 @@ $bruce-zindexList: (
     'Modal'
 );
 
+@mixin ExampleHighlight {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
 @import '~obtuse/lib/all';
 @include ObtuseConfig;
 @include ObtuseBase;
@@ -20,8 +24,11 @@ $bruce-zindexList: (
 @include ObtuseChoice;
 @include ObtuseDayPicker;
 @include ObtuseDropdown;
-@include ObtuseGrid;
-@include ObtuseHeading;
+@include ObtuseGrid {
+    &_column-exampleHighlight {
+        @include ExampleHighlight;
+    }
+};
 @include ObtuseIcon;
 @include ObtuseInput;
 @include ObtuseLabel;
@@ -30,6 +37,7 @@ $bruce-zindexList: (
 @include ObtuseLoader;
 @include ObtuseLogin;
 @include ObtuseMedia;
+@include ObtuseMessage;
 @include ObtuseModal;
 @include ObtuseNavigation;
 @include ObtusePagination;
@@ -48,8 +56,14 @@ $bruce-zindexList: (
 @include bruce-widths;
 
 .Example_container {
-    background-color: rgba(0, 0, 0, 0.04);
-    border: 1px solid #FFF;
     display: inline-block;
-    overflow: auto;
+    overflow: hidden;
+
+    &-exampleHighlight {
+        @include ExampleHighlight;
+    }
+
+    &-block {
+        display: block;
+    }
 }
