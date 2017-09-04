@@ -1,5 +1,0 @@
-@mixin ObtuseHeading($name: 'Heading') {
-    .#{$name} {
-        @content;
-    }
-}

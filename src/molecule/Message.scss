@@ -1,0 +1,27 @@
+@mixin ObtuseMessage($name: 'Message') {
+    .#{$name} {
+
+        &-block {
+            border-color: color('hairline');
+            border-style: dashed;
+            border-width: 1px;
+            color: color('message');
+            padding: 1rem;
+        }
+
+        &-success {
+            border-color: color('success');
+        }
+
+        &-failure {
+            border-color: color('failure');
+        }
+
+        &-deadEnd {
+            padding: 4rem;
+            text-align: center;
+        }
+
+        @content;
+    }
+}
