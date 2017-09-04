@@ -9,46 +9,46 @@ export default function Message(props: Object): React.Element<any> {
         children,
         className,
         code,
-        display,
+        appearance,
         modifier,
         peer,
         spruceName = 'Message',
         style,
         title,
-        type
+        state
     } = props;
 
     var colorModifier = '';
-    modifier = `${modifier || ''} ${display}`;
+    modifier = `${modifier || ''} ${appearance}`;
 
-    if(type === "fetch") {
+    if(state === "fetch") {
         colorModifier = "muted";
         modifier = `${modifier} fetch`;
     }
 
-    if(type === "error") {
+    if(state === "error") {
         colorModifier = "failure";
         modifier = `${modifier} failure`;
     }
 
-    if(type === "success") {
+    if(state === "success") {
         colorModifier = "success";
         modifier = `${modifier} success`;
     }
 
-    if(display === "inline") {
+    if(appearance === "inline") {
         return <span className={SpruceClassName({name: spruceName, modifier, className, peer})} style={style}>
             {children && <Text element="span" modifier={colorModifier}>{children}</Text>}
         </span>;
     }
 
-    if(display === "block") {
+    if(appearance === "block") {
         return <div className={SpruceClassName({name: spruceName, modifier, className, peer})} style={style}>
             {children && <Text element="span" modifier={colorModifier}>{children}</Text>}
         </div>;
     }
 
-    if(display === "deadEnd") {
+    if(appearance === "deadEnd") {
         return <div className={SpruceClassName({name: spruceName, modifier, className, peer})} style={style}>
             {title && <Text modifier="sizeGiga" element="div">{title}</Text>}
             {children && <Text element="div" className={`${spruceName}_message`}>{children}</Text>}
@@ -56,13 +56,13 @@ export default function Message(props: Object): React.Element<any> {
         </div>;
     }
 
-    throw new Error(`"${display}"" is not a valid option for "display" on <Message />`);
+    throw new Error(`"${appearance}"" is not a valid option for "appearance" on <Message />`);
 }
 
 Message.propTypes = {
     className: PropTypes.string,
     code: PropTypes.string,
-    display: PropTypes.oneOf([
+    appearance: PropTypes.oneOf([
         "block",
         "deadEnd",
         "inline"
@@ -73,7 +73,7 @@ Message.propTypes = {
     spruceName: PropTypes.string,
     style: PropTypes.object,
     title: PropTypes.string,
-    type: PropTypes.oneOf([
+    state: PropTypes.oneOf([
         "error",
         "fetch",
         "success"
@@ -81,7 +81,7 @@ Message.propTypes = {
 };
 
 Message.defaultProps = {
-    display: "deadEnd",
+    appearance: "deadEnd",
     migrate: false,
-    type: ""
+    state: ""
 };

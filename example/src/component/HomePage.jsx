@@ -102,23 +102,23 @@ export default () => {
             <Example containerModifier="block exampleHighlight">
                 <Message>Message</Message>
             </Example>
-            <Example containerModifier="block exampleHighlight" modifierName="type='fetch'">
-                <Message type="fetch">Fetching</Message>
+            <Example containerModifier="block exampleHighlight" modifierName="state='fetch'">
+                <Message state="fetch">Fetching</Message>
             </Example>
-            <Example containerModifier="block exampleHighlight" modifierName="type='success'">
-                <Message type="success">Success</Message>
+            <Example containerModifier="block exampleHighlight" modifierName="state='success'">
+                <Message state="success">Success</Message>
             </Example>
-            <Example containerModifier="block exampleHighlight" modifierName="type='error'">
-                <Message type="error">Error</Message>
+            <Example containerModifier="block exampleHighlight" modifierName="state='error'">
+                <Message state="error">Error</Message>
             </Example>
-            <Example containerModifier="block exampleHighlight" modifierName="display='deadEnd' title='Title'">
-                <Message display="deadEnd" title="Title">DeadEnd message</Message>
+            <Example containerModifier="block exampleHighlight" modifierName="appearance='deadEnd' title='Title'">
+                <Message appearance="deadEnd" title="Title">DeadEnd message</Message>
             </Example>
-            <Example containerModifier="block exampleHighlight" modifierName="display='block'">
-                <Message display="block">Block message</Message>
+            <Example containerModifier="block exampleHighlight" modifierName="appearance='block'">
+                <Message appearance="block">Block message</Message>
             </Example>
-            <Example containerModifier="block exampleHighlight" modifierName="display='inline'">
-                <Message display="inline">Block message</Message>
+            <Example containerModifier="block exampleHighlight" modifierName="appearance='inline'">
+                <Message appearance="inline">Block message</Message>
             </Example>
         </ExampleComponent>
 
