@@ -2133,10 +2133,6 @@ goose-css@^0.8.1:
   dependencies:
     stampy "^0.30.0"
 
-goose@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/goose/-/goose-0.0.3.tgz#0a5a99d0a5b12497219c6600babf4b99584e1200"
-
 got@^5.0.0:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/got/-/got-5.7.1.tgz#5f81635a61e4a6589f180569ea4e381680a51f35"

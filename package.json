@@ -29,7 +29,6 @@
     "test-all": "NODE_ENV=test yarn run lint && yarn run flow && yarn run test"
   },
   "dependencies": {
-    "goose": "^0.0.3",
     "goose-css": "^0.8.1",
     "moment": "^2.18.1",
     "numeral": "^2.0.6",
