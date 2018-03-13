@@ -1,7 +1,7 @@
 {
   "main": "lib/index.js",
   "name": "obtuse",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "Bruce&#39;s Obtuse Spruce Goose",
   "license": "UNLICENSED",
   "author": "Allan Hortle",
