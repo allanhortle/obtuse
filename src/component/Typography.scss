@@ -1,5 +1,118 @@
+@import './Image';
+@import './List';
+@import './Text';
+
 @mixin ObtuseTypography($name: 'Typography') {
     .#{$name} {
+
+        img {
+            @include ObtuseImageDeclaration;
+            @include ObtuseImage-center;
+            @include ObtuseImage-margin;
+        }
+
+        * + * {
+            margin-top: .8em;
+        }
+
+        a {
+            @include ObtuseLinkDeclaration;
+        }
+
+        h1 {
+            @include ObtuseText-sizeGiga;
+            @include ObtuseText-marginGiga;
+        }
+
+        h2 {
+            @include ObtuseText-sizeMega;
+            @include ObtuseText-marginMega;
+        }
+
+        h3 {
+            @include ObtuseText-sizeKilo;
+            @include ObtuseText-marginKilo;
+        }
+
+        h4 {
+            @include ObtuseText-sizeHecto;
+            @include ObtuseText-marginHecto;
+        }
+
+        p {
+            @include ObtuseText-margin;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: .5rem;
+            border: 1px solid color('hairline');
+
+            img {
+                margin-top: 0;
+                margin-bottom: .5rem;
+            }
+        }
+
+        th {
+            padding: .5rem;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        em {
+            @include ObtuseText-emphasis;
+        }
+
+        strong {
+            @include ObtuseText-strong;
+        }
+
+        ul {
+            @include ObtuseList-margin;
+            list-style-type: square;
+            padding-left: 2rem;
+        }
+
+        ol {
+            @include ObtuseList-margin;
+            list-style-type: decimal;
+            padding-left: 2rem;
+        }
+
+        li {
+            @include ObtuseList_item-margin;
+        }
+
+        code {
+            padding: 0;
+            padding-top: .2em;
+            padding-bottom: .2em;
+            margin: 0;
+            font-size: 85%;
+            background-color: color('alternativeBackground');
+            border-radius: 0.2em;
+            font-family: font('monospace');
+
+            &:before,
+            &:after {
+                letter-spacing: -.2em;
+                content: '\00a0';
+            }
+        }
+
+        pre > code {
+            padding: 1rem;
+            background-color: color('alternativeBackground');
+            font-family: font('monospace');
+            display: block;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
         @content;
     }
 }

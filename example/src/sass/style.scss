@@ -1,8 +1,8 @@
 @import '~bruce/bruce';
-@include bruce-reset();
-@include bruce-box-sizing();
+@include BruceReset();
+@include BruceBoxSizing();
 
-$bruce-zindexList: (
+$bruce-zindex: (
     'Select',
     'Modal'
 );
@@ -50,10 +50,6 @@ $bruce-zindexList: (
 @include ObtuseText;
 @include ObtuseWrapper;
 
-@include bruce-component-media;
-@include bruce-classes;
-@include bruce-float;
-@include bruce-widths;
 
 .Example_container {
     display: inline-block;

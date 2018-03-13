@@ -1,5 +1,28 @@
+
+@mixin ObtuseLinkDeclaration {
+    color: color('link');
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        color: lighten(color('link'), 8);
+        text-decoration: underline;
+    }
+
+    &-muted {
+        color: color('muted');
+
+        &:hover,
+        &:focus {
+            color: lighten(color('muted'), 8);
+            text-decoration: underline;
+        }
+    }
+}
+
 @mixin ObtuseLink($name: 'Link') {
     .#{$name} {
+        @include ObtuseLinkDeclaration;
         @content;
     }
 }

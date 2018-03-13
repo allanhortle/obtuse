@@ -1,57 +1,156 @@
+@import './Link';
+
+// Size
+
+@mixin ObtuseText-sizeGiga {
+    color: color('heading');
+    font-family: font('heading');
+    font-size: 2.2rem;
+    line-height: 3.6rem;
+}
+
+@mixin ObtuseText-sizeMega {
+    color: color('heading');
+    font-family: font('heading');
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+
+@mixin ObtuseText-sizeKilo {
+    color: color('heading');
+    font-family: font('heading');
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+@mixin ObtuseText-sizeHecto {
+    font-family: font('heading');
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+}
+
+@mixin ObtuseText-sizeMilli {
+    font-size: .8rem;
+}
+
+// Margin
+
+@mixin ObtuseText-marginGiga {
+    margin: 2rem 0;
+}
+
+@mixin ObtuseText-marginBottomGiga {
+    margin-bottom: 2rem;
+}
+
+@mixin ObtuseText-marginMega {
+    margin: 1.5rem 0;
+}
+
+@mixin ObtuseText-marginBottomMega {
+    margin-bottom: 1.5rem;
+}
+
+@mixin ObtuseText-marginKilo {
+    margin: 1.5rem 0;
+}
+
+@mixin ObtuseText-marginBottomKilo {
+    margin-bottom: 1.5rem;
+}
+
+@mixin ObtuseText-marginHecto {
+    margin: 1.5rem 0;
+}
+
+@mixin ObtuseText-margin {
+    margin-bottom: 1rem;
+}
+
+// Goose
+
+@mixin ObtuseText-emphasis {
+    font-style: italic;
+}
+
+@mixin ObtuseText-strong {
+    font-weight: 700;
+}
+
+// Text mixin
+
 @mixin ObtuseText($name: 'Text') {
     .#{$name} {
 
         // Size
 
-        &-sizeGiga {
+        &-sizeTera {
             color: color('heading');
-            font-size: 3.5rem;
-            font-weight: 400;
+            font-family: font('heading');
+            font-size: 4rem;
+            line-height: 6rem;
+        }
+
+        &-sizeGiga {
+            @include ObtuseText-sizeGiga;
         }
 
         &-sizeMega {
-            color: color('heading');
-            font-size: 2.5rem;
-            font-weight: 300;
+            @include ObtuseText-sizeMega;
         }
 
         &-sizeKilo {
-            color: color('heading');
-            font-size: 2rem;
-            font-weight: 300;
+            @include ObtuseText-sizeKilo;
         }
 
-        &-size {
-            font-size: 1rem;
+        &-sizeHecto {
+            @include ObtuseText-sizeHecto;
         }
 
         &-sizeMilli {
-            font-size: .9rem;
+            @include ObtuseText-sizeMilli;
         }
 
         // Margin
 
         &-marginGiga {
-            margin-top: 4.5rem;
-            margin-bottom: 1rem;
+            @include ObtuseText-marginGiga;
+        }
+
+        &-marginBottomGiga {
+            @include ObtuseText-marginBottomGiga;
         }
 
         &-marginMega {
-            margin-top: 3rem;
-            margin-bottom: 1rem;
+            @include ObtuseText-marginMega;
+        }
+
+        &-marginBottomMega {
+            @include ObtuseText-marginBottomMega;
         }
 
         &-marginKilo {
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
+            @include ObtuseText-marginKilo;
+        }
+
+        &-marginBottomKilo {
+            @include ObtuseText-marginBottomKilo;
+        }
+
+        &-marginHecto {
+            @include ObtuseText-marginHecto;
         }
 
         &-margin {
-            margin-bottom: 1rem;
+            @include ObtuseText-margin;
         }
 
-        &-marginMilli {
-            margin-bottom: .5rem;
+        &-marginLeft {
+            margin-left: .5rem;
+        }
+
+        &-marginRight {
+            margin-right: .5rem;
         }
 
         // Goose
@@ -61,12 +160,11 @@
         }
 
         &-emphasis {
-            font-style: italic;
+            @include ObtuseText-emphasis;
         }
 
         &-strong {
-            color: color('heading');
-            font-weight: 700;
+            @include ObtuseText-strong;
         }
 
         // Other modifiers
@@ -76,9 +174,15 @@
             cursor: pointer;
             text-decoration: underline;
 
-            &:hover {
+            &:hover,
+            &:focus {
                 opacity: .8;
             }
+        }
+
+        &-hero {
+            font-weight: 900;
+            letter-spacing: -1px;
         }
 
         &-capitalize {
@@ -102,8 +206,16 @@
             text-decoration: underline;
         }
 
+        &-left {
+            text-align: left;
+        }
+
         &-center {
             text-align: center;
+        }
+
+        &-right {
+            text-align: right;
         }
 
         @each $name, $color in $bruce-colors {
@@ -115,19 +227,6 @@
         &-disabled {
             color: grey(60);
             cursor: default;
-        }
-
-        &-code {
-            background-color: color('alternativeBackground');
-            padding: 0 .25rem;
-            border-radius: 3px;
-        }
-
-        // Peers
-
-        &--Button {
-            line-height: 1.2;
-            padding: .5rem 1rem .5rem .5rem;
         }
 
         @content;

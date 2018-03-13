@@ -1,6 +1,12 @@
-$bruce-fonts: ();
-$bruce-colors: ();
-// $bruce-breakpoints: ();
+@if not global-variable-exists('bruce-fonts') {
+    $bruce-fonts: () !global;
+};
+@if not global-variable-exists('bruce-colors') {
+    $bruce-colors: () !global;
+};
+@if not global-variable-exists('bruce-breakpoints') {
+    $bruce-breakpoints: () !global;
+};
 
 
 @mixin ObtuseConfig($theme: 'light', $fontStyle: 'monospace') {
@@ -95,6 +101,13 @@ $bruce-colors: ();
     //
     // Breakpoints
 
-    // $bruce-breakpoints: ();
+    $breakpoints: (
+        'large':  1280px,
+        'medium': 1024px,
+        'small':  768px,
+        'tiny':   480px
+    );
+
+    $bruce-breakpoints: map-merge($bruce-breakpoints, $breakpoints) !global;
 
 }

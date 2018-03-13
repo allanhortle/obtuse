@@ -29,7 +29,7 @@
     "test-all": "NODE_ENV=test yarn run lint && yarn run flow && yarn run test"
   },
   "dependencies": {
-    "goose-css": "^0.8.1",
+    "goose-css": "^0.12.0",
     "moment": "^2.18.1",
     "numeral": "^2.0.6",
     "prop-types": "^15.5.8"
@@ -37,7 +37,7 @@
   "devDependencies": {
     "ava": "^0.17.0",
     "babel-cli": "^6.5.0",
-    "babel-core": "^6.18.2",
+    "babel-core": "^6.26.0",
     "babel-plugin-istanbul": "^4.1.4",
     "babel-preset-blueflag": "^0.3.0",
     "dotenv": "^2.0.0",
