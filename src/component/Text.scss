@@ -194,7 +194,7 @@
         }
 
         &-block {
-            @include bruce-clearfix;
+            @include BruceClearfix;
             display: block;
         }
 
