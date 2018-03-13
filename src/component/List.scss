@@ -1,14 +1,35 @@
+@mixin ObtuseList-margin {
+    margin-bottom: 1rem;
+}
+
+@mixin ObtuseList_item-margin {
+    margin-bottom: .5rem;
+}
+
+@mixin ObtuseList_item-marginMilli {
+    margin-bottom: .25rem;
+}
+
 @mixin ObtuseList($name: 'List') {
     .#{$name} {
 
-        &_item {
-            @include BruceDirectionModifiers('margin' 'Milli', 'margin', .5rem);
-            @include BruceDirectionModifiers('margin', 'margin', 1rem);
+        &-margin {
+            @include ObtuseList-margin;
         }
 
-        @include BruceDirectionModifiers('margin' 'Milli', 'margin', .5rem);
-        @include BruceDirectionModifiers('margin', 'margin', 1rem);
-        @include BruceDirectionModifiers('margin' 'Kilo', 'margin', 1.5rem);
+        &_item {
+            &-margin {
+                @include ObtuseList_item-margin;
+            }
+
+            &-marginMilli {
+                @include ObtuseList_item-marginMilli;
+            }
+
+            &-bullet {
+                list-style-type: disc;
+            }
+        }
 
         @content;
     }
