@@ -1,7 +1,8 @@
 // @flow
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {Label} from 'stampy';
+import Label from 'stampy/lib/component/Label';
+
 import Text from '../component/Text';
 
 import goose from 'goose-css';
